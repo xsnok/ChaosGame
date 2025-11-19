@@ -21,6 +21,14 @@ int main()
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
 
+	Font font;
+	if (!font.loadFromFile("ARIAL.TTF")) cout << "Error" << endl;
+	Text text;
+	text.setFont(font);
+	text.setString("TEST");
+	text.setCharacterSize(60);
+	text.setFillColor(Color::Blue);
+	text.setPosition(100,100);
 	while (window.isOpen())
 	{
 		/*
@@ -86,6 +94,7 @@ int main()
 		****************************************
 		*/
 		window.clear();
+		window.draw(text);
 		for(int i = 0; i < vertices.size(); i++)
 		{
 		    RectangleShape rect(Vector2f(10,10));
