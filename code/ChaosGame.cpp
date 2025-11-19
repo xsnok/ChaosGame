@@ -78,7 +78,6 @@ int main()
 
 			float newY = (vertices[vNum].y + points.back().y) / 2.f;
 			points.push_back(Vector2f(newX, newY));
-			cout << Vector2f(newX, newY) << endl;
 		}
 	
 		/*
@@ -94,7 +93,14 @@ int main()
 		    rect.setFillColor(Color::Blue);
 		    window.draw(rect);
 		}
-		///TODO:  Draw points
+		///TODO:  Draw 
+		for(int i = 0; i < points.size(); i++)
+		{
+			RectangleShape rect(Vector2f(2,2));
+			rect.setPosition(points[i]);
+			rect.setFillColor(Color::White);
+			window.draw(rect);
+		}
 
 		window.display();
 	}

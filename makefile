@@ -9,13 +9,13 @@ CXXFLAGS := -g -Wall -fpermissive -std=c++17
 TARGET := ChaosGame.out
 
 $(TARGET): $(OBJ_FILES)
-		g++ -o $@ $^ $(LDFLAGS)
+	g++ -o $@ $^ $(LDFLAGS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
-		g++ $(CXXFLAGS) -c -o $@ $<
+	g++ $(CXXFLAGS) -c -o $@ $<
 
 run:
-		./$(TARGET)
+	./$(TARGET)
 
 clean:
-		rm $(TARGET) $(OBJ_DIR)/*.o
+	rm $(TARGET) $(OBJ_DIR)/*.o
