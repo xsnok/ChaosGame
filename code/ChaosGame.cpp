@@ -8,7 +8,7 @@
 //Make the code easier to type with "using namespace"
 using namespace sf;
 using namespace std;
-
+//test
 int main()
 {
 	// Create a video mode object
